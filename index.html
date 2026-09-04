@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExtraSpeech — Olivier Den Hartigh, English &rarr; French (France) Translator</title>
+<meta name="description" content="30+ years translating English into French (France) — direct, without an agency. Finance, crypto, tech, healthcare and cybersecurity.">
+<style>
+  :root{
+    --navy:#1D4E89;
+    --teal:#2A9B8F;
+    --bg-light:#E9F4FA;
+    --lavender:#E4ECF5;
+    --mint:#DFF1EE;
+    --text:#2A313A;
+    --text-soft:#4A5666;
+    --white:#FFFFFF;
+    --border:#D5E4EF;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Work Sans', Arial, Helvetica, sans-serif;
+    color:var(--text);
+    background:var(--white);
+    line-height:1.6;
+  }
+  h1,h2,h3,.brand-name{
+    font-family:Georgia,'Times New Roman',serif;
+    color:var(--navy);
+    margin:0;
+  }
+  a{color:var(--navy);}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:2.2px;
+    text-transform:uppercase;
+    color:var(--teal);
+    font-weight:700;
+    margin-bottom:10px;
+    display:block;
+  }
+  .rule{width:34px;height:2px;background:var(--teal);margin-bottom:14px;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:20;
+    background:rgba(255,255,255,0.96);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(6px);
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;}
+  .logo-group{display:flex;align-items:center;gap:14px;text-decoration:none;}
+  .logo-group svg{width:52px;height:52px;display:block;}
+  .logo-text .brand-name{font-size:20px;font-weight:700;letter-spacing:0.4px;}
+  .logo-text .brand-tag{font-size:10.5px;color:var(--teal);font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+  nav{display:flex;gap:26px;}
+  nav a{
+    font-size:14px;color:var(--text-soft);text-decoration:none;font-weight:600;
+  }
+  nav a:hover{color:var(--navy);}
+  @media (max-width:720px){ nav{display:none;} }
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(160deg,var(--bg-light) 0%,#ffffff 62%);
+    padding:76px 0 64px;
+  }
+  .hero .wrap{display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;}
+  @media (max-width:860px){ .hero .wrap{grid-template-columns:1fr;} }
+  .hero h1{font-size:40px;line-height:1.18;margin-bottom:18px;}
+  .hero p.lead{font-size:17px;color:var(--text-soft);margin:0 0 26px;max-width:52ch;}
+  .hero-note{font-size:13.5px;color:var(--text-soft);margin-top:18px;}
+  .hero-note b{color:var(--navy);}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:13px 24px;border-radius:6px;font-size:14.5px;font-weight:700;
+    text-decoration:none;border:2px solid transparent;
+  }
+  .btn-primary{background:var(--navy);color:#fff;}
+  .btn-primary:hover{background:#163d6b;}
+  .btn-secondary{background:transparent;color:var(--navy);border-color:var(--navy);}
+  .btn-secondary:hover{background:var(--lavender);}
+  .hero-card{
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:26px 24px;
+    box-shadow:0 8px 30px rgba(29,78,137,0.08);
+  }
+  .hero-card ul{list-style:none;margin:0;padding:0;}
+  .hero-card li{
+    display:flex;gap:10px;font-size:14px;color:var(--text-soft);padding:9px 0;border-bottom:1px solid var(--border);
+  }
+  .hero-card li:last-child{border-bottom:none;}
+  .hero-card .check{color:var(--teal);font-weight:700;}
+
+  section{padding:64px 0;}
+  .section-head{max-width:640px;margin:0 0 40px;}
+  .section-head h2{font-size:27px;}
+  .section-head p{color:var(--text-soft);font-size:15.5px;margin-top:10px;}
+  .alt-bg{background:var(--bg-light);}
+
+  /* Why direct */
+  .three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media (max-width:800px){ .three-col{grid-template-columns:1fr;} }
+  .arg-card{background:var(--mint);border-left:3px solid var(--teal);border-radius:6px;padding:22px 22px;}
+  .arg-card .num{
+    width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin-bottom:12px;
+  }
+  .arg-card h3{font-size:16px;margin-bottom:8px;}
+  .arg-card p{font-size:14px;color:var(--text-soft);margin:0;}
+
+  /* Services */
+  .service-groups{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  @media (max-width:800px){ .service-groups{grid-template-columns:1fr;} }
+  .service-group h3{font-size:13px;letter-spacing:1.4px;text-transform:uppercase;color:var(--teal);margin-bottom:16px;}
+  .service-item{margin-bottom:18px;}
+  .service-item b{color:var(--navy);font-size:15px;}
+  .service-item p{margin:4px 0 0;font-size:14px;color:var(--text-soft);}
+  .subtitling-box{
+    margin-top:36px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:20px 24px;
+  }
+  .subtitling-box h3{font-size:14px;color:var(--navy);margin-bottom:10px;}
+  .subtitling-box ul{margin:0;padding-left:18px;color:var(--text-soft);font-size:14px;}
+  .subtitling-box li{margin-bottom:4px;}
+
+  /* Sectors */
+  .sector-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  @media (max-width:800px){ .sector-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .sector-grid{grid-template-columns:1fr;} }
+  .sector-chip{
+    background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px 16px;
+  }
+  .sector-chip b{display:block;color:var(--navy);font-size:14.5px;margin-bottom:4px;}
+  .sector-chip span{font-size:12.5px;color:var(--teal);font-weight:600;}
+
+  /* Testimonials */
+  .feature-quote{
+    background:var(--navy);color:#fff;border-radius:10px;padding:34px 36px;margin-bottom:28px;
+  }
+  .feature-quote p{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:18px;line-height:1.55;margin:0 0 16px;}
+  .feature-quote footer{font-size:13.5px;color:#AFC6E2;font-style:normal;}
+  .quote-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  @media (max-width:800px){ .quote-grid{grid-template-columns:1fr;} }
+  .quote-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 22px;}
+  .quote-card p{font-size:14.5px;color:var(--text);margin:0 0 12px;}
+  .quote-card footer{font-size:13px;color:var(--text-soft);}
+  .quote-card footer b{color:var(--navy);}
+  .verify-note{font-size:13px;color:var(--text-soft);margin-top:22px;}
+
+  /* Credentials */
+  .cred-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 28px;}
+  @media (max-width:700px){ .cred-grid{grid-template-columns:1fr;} }
+  .cred-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);}
+  .cred-item .dot{color:var(--teal);font-weight:700;font-size:16px;}
+  .cred-item p{margin:0;font-size:14.5px;color:var(--text-soft);}
+  .cred-item b{color:var(--navy);}
+
+  /* CTA / contact */
+  .contact{
+    background:linear-gradient(120deg,var(--navy) 0%,#153f6e 100%);
+    color:#fff;
+    border-radius:14px;
+    padding:48px 40px;
+    text-align:center;
+  }
+  .contact h2{color:#fff;font-size:26px;margin-bottom:12px;}
+  .contact p{color:#CBDBEE;max-width:56ch;margin:0 auto 26px;font-size:15px;}
+  .contact .cta-row{justify-content:center;}
+  .contact .btn-secondary{color:#fff;border-color:#fff;}
+  .contact .btn-secondary:hover{background:rgba(255,255,255,0.12);}
+  .contact-details{margin-top:26px;font-size:13.5px;color:#AFC6E2;}
+  .contact-details a{color:#fff;}
+
+  footer.site-footer{padding:34px 0;text-align:center;font-size:12.5px;color:var(--text-soft);}
+  footer.site-footer a{color:var(--text-soft);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo-group">
+      <svg viewBox="0 0 496 496" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 0 C0.899 0.001 1.797 0.001 2.723 0.002 C47.722 0.126 91.645 13.764 128.188 40.375 C128.741 40.774 129.294 41.173 129.863 41.584 C138.55 47.901 146.442 54.947 154.188 62.375 C154.429 62.602 154.429 62.602 155.648 63.753 C163.333 71.016 169.86 78.916 176.188 87.375 C176.614 87.936 177.041 88.496 177.48 89.074 C184.734 98.629 190.661 108.737 196.188 119.375 C196.546 120.059 196.904 120.743 197.273 121.448 C212.72 151.318 219.639 184.749 219.562 218.188 C219.562 218.637 219.562 218.637 219.561 220.911 C219.436 265.91 205.799 309.833 179.188 346.375 C178.789 346.928 178.39 347.481 177.979 348.051 C171.661 356.738 164.616 364.63 157.188 372.375 C156.733 372.857 156.278 373.339 155.809 373.836 C148.546 381.521 140.647 388.047 132.188 394.375 C131.907 394.588 131.907 394.588 130.489 395.668 C120.933 402.922 110.825 408.849 100.188 414.375 C99.503 414.733 98.819 415.092 98.115 415.461 C68.245 430.908 34.813 437.826 1.375 437.75 C0.476 437.749 -0.422 437.749 -1.348 437.748 C-46.347 437.624 -90.27 423.986 -126.812 397.375 C-127.366 396.976 -127.919 396.577 -128.488 396.166 C-137.175 389.849 -145.067 382.803 -152.812 375.375 C-153.295 374.92 -153.777 374.465 -154.273 373.997 C-161.958 366.734 -168.485 358.834 -174.812 350.375 C-175.239 349.814 -175.666 349.254 -176.105 348.676 C-183.359 339.121 -189.286 329.013 -194.812 318.375 C-195.171 317.691 -195.529 317.007 -195.898 316.302 C-211.345 286.432 -218.264 253.001 -218.188 219.562 C-218.187 218.664 -218.186 217.765 -218.186 216.839 C-218.061 171.84 -204.424 127.917 -177.812 91.375 C-177.613 91.098 -177.613 91.098 -176.604 89.699 C-170.286 81.012 -163.241 73.12 -155.812 65.375 C-155.358 64.893 -154.903 64.411 -154.434 63.914 C-147.171 56.229 -139.272 49.703 -130.812 43.375 C-130.532 43.162 -130.532 43.162 -129.114 42.082 C-119.558 34.828 -109.45 28.901 -98.812 23.375 C-98.47 23.196 -98.47 23.196 -96.74 22.289 C-66.87 6.842 -33.438 -0.076 0 0 Z M-38.812 10.375 C-39.679 10.547 -40.546 10.718 -41.439 10.895 C-83.421 19.486 -118.985 40.038 -149.812 69.375 C-150.465 69.986 -151.117 70.597 -151.789 71.227 C-156.946 76.195 -161.415 81.738 -165.812 87.375 C-166.241 87.922 -166.669 88.468 -167.11 89.031 C-175.034 99.233 -181.698 110.003 -187.812 121.375 C-188.18 122.057 -188.547 122.739 -188.925 123.442 C-204.263 152.533 -211.037 185.453 -211.062 218.125 C-211.063 218.9 -211.064 219.675 -211.065 220.474 C-211.047 233.314 -210.337 245.754 -207.812 258.375 C-207.641 259.242 -207.469 260.109 -207.292 261.002 C-198.701 302.983 -178.15 338.547 -148.812 369.375 C-148.201 370.027 -147.59 370.68 -146.961 371.352 C-141.992 376.509 -136.45 380.978 -130.812 385.375 C-130.266 385.803 -129.719 386.232 -129.156 386.673 C-118.954 394.597 -108.185 401.261 -96.812 407.375 C-96.13 407.742 -95.448 408.109 -94.745 408.488 C-65.654 423.826 -32.734 430.599 -0.062 430.625 C0.713 430.626 1.488 430.626 2.287 430.627 C15.126 430.609 27.567 429.9 40.188 427.375 C41.054 427.203 41.921 427.032 42.814 426.855 C84.796 418.264 120.36 397.712 151.188 368.375 C151.84 367.764 152.492 367.153 153.164 366.523 C159.653 360.271 165.286 353.126 170.438 345.75 C172.363 343.114 172.874 342.484 176.062 341.375 C176.764 341.375 177.465 341.375 178.188 341.375 C178.213 340.877 178.239 340.378 178.266 339.865 C178.717 334.449 180.193 331.029 183.188 326.562 C203.289 294.572 212.408 257.157 212.438 219.625 C212.438 218.85 212.439 218.075 212.44 217.276 C212.422 204.436 211.712 191.996 209.188 179.375 C209.016 178.508 208.844 177.641 208.667 176.748 C200.076 134.767 179.525 99.203 150.188 68.375 C149.882 68.049 149.882 68.049 148.336 66.398 C143.367 61.241 137.825 56.772 132.188 52.375 C131.914 52.161 131.914 52.161 130.531 51.077 C120.329 43.153 109.56 36.489 98.188 30.375 C97.846 30.191 97.846 30.191 96.12 29.262 C67.029 13.924 34.109 7.151 1.438 7.125 C0.662 7.124 -0.113 7.124 -0.912 7.123 C-13.751 7.141 -26.192 7.85 -38.812 10.375 Z" fill="#1D4E89" fill-rule="evenodd" transform="translate(247.8125,29.625)"/>
+        <path d="M0 0 C8.58 0 17.16 0 26 0 C28.33 9.188 30.659 18.376 32.989 27.565 C34.071 31.831 35.152 36.097 36.234 40.364 C37.278 44.481 38.322 48.598 39.366 52.716 C39.764 54.286 40.162 55.857 40.561 57.428 C41.119 59.628 41.676 61.828 42.234 64.028 C42.399 64.678 42.564 65.327 42.733 65.997 C43.494 68.997 44.249 71.998 45 75 C45.33 50.25 45.66 25.5 46 0 C52.93 0 59.86 0 67 0 C67 54.78 67 109.56 67 166 C58.42 166 49.84 166 41 166 C35.06 142.24 29.12 118.48 23 94 C22.67 117.76 22.34 141.52 22 166 C14.74 166 7.48 166 0 166 C0 111.22 0 56.44 0 0 Z" fill="#1D4E89" transform="translate(161,182)"/>
+        <path d="M0 0 C26.4 0 52.8 0 80 0 C80 6.93 80 13.86 80 21 C60.86 21 41.72 21 22 21 C22 38.49 22 55.98 22 74 C35.53 74 49.06 74 63 74 C63 81.26 63 88.52 63 96 C49.47 96 35.94 96 22 96 C22 112.17 22 128.34 22 145 C41.14 145 60.28 145 80 145 C80 151.93 80 158.86 80 166 C53.6 166 27.2 166 0 166 C0 111.22 0 56.44 0 0 Z" fill="#1D4E89" transform="translate(70,182)"/>
+        <path d="M0 0 C3.365 1.008 6.783 1.765 10.205 2.552 C11.469 2.856 12.732 3.162 13.994 3.47 C14.607 3.62 15.22 3.769 15.852 3.923 C16.471 4.074 17.09 4.225 17.728 4.38 C19.044 4.7 20.359 5.019 21.674 5.337 C24.817 6.1 27.961 6.865 31.103 7.63 C31.103 7.96 31.103 8.29 31.103 8.63 C33.413 8.795 33.413 8.795 45.103 9.63 C45.628 10.825 46.152 12.02 46.692 13.251 C48.653 17.719 50.613 22.186 52.574 26.653 C53.42 28.58 54.266 30.507 55.111 32.434 C56.332 35.217 57.554 38 58.775 40.783 C59.148 41.633 59.521 42.484 59.906 43.36 C60.266 44.18 60.626 45 60.997 45.845 C61.344 46.636 61.69 47.427 62.047 48.242 C62.776 49.89 63.515 51.534 64.262 53.174 C64.629 53.982 64.996 54.789 65.374 55.621 C65.706 56.344 66.038 57.067 66.381 57.813 C67.103 59.63 67.103 59.63 67.103 61.63 C49.943 61.63 32.783 61.63 15.103 61.63 C11.143 54.04 7.183 46.45 3.103 38.63 C0.93 34.579 -1.245 30.534 -3.459 26.505 C-3.952 25.602 -4.445 24.698 -4.953 23.767 C-8.781 16.773 -8.781 16.773 -10.736 13.638 C-11.897 11.63 -11.897 11.63 -11.897 9.63 C-13.877 9.63 -15.857 9.63 -17.897 9.63 C-18.177 10.358 -18.458 11.085 -18.747 11.834 C-19.815 14.433 -20.996 16.886 -22.295 19.377 C-22.532 19.831 -22.532 19.831 -23.731 22.134 C-24.24 23.102 -24.748 24.07 -25.272 25.068 C-25.796 26.07 -26.32 27.073 -26.861 28.106 C-32.076 38.053 -37.455 47.91 -42.872 57.749 C-43.57 59.03 -44.244 60.325 -44.897 61.63 C-62.057 61.63 -79.217 61.63 -96.897 61.63 C-93.522 51.506 -93.522 51.506 -91.919 47.984 C-91.563 47.194 -91.206 46.404 -90.838 45.589 C-90.463 44.77 -90.088 43.951 -89.701 43.107 C-89.308 42.239 -88.915 41.371 -88.511 40.477 C-87.268 37.734 -86.02 34.995 -84.772 32.255 C-83.517 29.494 -82.263 26.732 -81.011 23.97 C-80.235 22.258 -79.457 20.548 -78.677 18.838 C-78.327 18.067 -77.976 17.295 -77.615 16.5 C-77.461 16.162 -77.461 16.162 -76.68 14.449 C-75.897 12.63 -75.897 12.63 -74.897 9.63 C-74.414 9.606 -74.414 9.606 -71.975 9.482 C-70.699 9.407 -69.423 9.331 -68.147 9.255 C-67.512 9.224 -66.878 9.194 -66.225 9.162 C-62.563 8.933 -60.111 8.292 -56.897 6.63 C-55.597 6.192 -54.285 5.79 -52.964 5.422 C-52.202 5.209 -51.44 4.996 -50.654 4.777 C-47.13 3.827 -43.601 2.898 -40.066 1.987 C-38.224 1.505 -36.385 1.006 -34.552 0.491 C-21.944 -3.043 -12.566 -3.873 0 0 Z" fill="#2A9B8F" transform="translate(355.89654541015625,306.36956787109375)"/>
+        <path d="M0 0 C11.88 0 23.76 0 36 0 C39.244 16.101 39.244 16.101 40.621 22.959 C41.561 27.641 42.502 32.322 43.446 37.003 C44.207 40.776 44.965 44.549 45.722 48.324 C46.011 49.764 46.301 51.205 46.592 52.645 C47 54.66 47.404 56.676 47.807 58.693 C47.928 59.29 48.05 59.887 48.175 60.502 C48.685 63.072 49 65.367 49 68 C49.544 67.995 50.088 67.99 50.649 67.984 C53.141 67.963 55.633 67.95 58.125 67.938 C58.981 67.929 59.837 67.921 60.719 67.912 C61.557 67.909 62.395 67.906 63.258 67.902 C64.022 67.897 64.787 67.892 65.575 67.886 C68.404 68.019 71.206 68.534 74 69 C74 73.29 74 77.58 74 82 C37.04 82 0.08 82 -38 82 C-38 77.71 -38 73.42 -38 69 C-34.098 68.35 -31.079 67.876 -27.258 67.902 C-26.839 67.904 -26.839 67.904 -24.719 67.912 C-23.863 67.92 -23.007 67.929 -22.125 67.938 C-21.246 67.942 -20.367 67.947 -19.461 67.951 C-17.307 67.963 -15.154 67.98 -13 68 C-12.886 67.216 -12.772 66.432 -12.654 65.624 C-11.456 57.6 -10.011 49.652 -8.398 41.699 C-8.154 40.485 -7.911 39.27 -7.667 38.056 C-7.035 34.907 -6.4 31.759 -5.763 28.611 C-4.996 24.809 -4.232 21.005 -3.468 17.202 C-2.315 11.467 -1.157 5.734 0 0 Z M2 8 C2.611 11.293 3.753 13.297 5.793 15.934 C6.34 16.665 6.887 17.397 7.451 18.15 C8.611 19.678 9.781 21.199 10.959 22.713 C15.074 28.263 15.074 28.263 14.75 31.492 C14.173 32.32 13.595 33.147 13 34 C12.573 34.629 12.146 35.258 11.706 35.906 C10.119 38.201 8.473 40.445 6.812 42.688 C5.638 44.295 4.463 45.903 3.289 47.512 C2.723 48.283 2.158 49.054 1.575 49.849 C-0.406 52.554 -2.369 55.269 -4.312 58 C-4.845 58.743 -5.377 59.485 -5.926 60.25 C-7 62 -7 62 -7 64 C-3.696 62.608 -2.067 61.136 -0.012 58.219 C0.527 57.463 1.065 56.708 1.62 55.929 C2.178 55.128 2.737 54.326 3.312 53.5 C3.888 52.689 4.464 51.879 5.058 51.043 C7.514 47.578 9.944 44.096 12.336 40.586 C12.947 39.691 13.558 38.797 14.188 37.875 C14.442 37.492 14.442 37.492 15.73 35.555 C16.149 35.042 16.568 34.529 17 34 C17.66 34 18.32 34 19 34 C20.278 35.462 20.278 35.462 21.723 37.516 C22.257 38.267 22.792 39.019 23.343 39.793 C23.91 40.604 24.478 41.415 25.062 42.25 C26.236 43.899 27.411 45.547 28.586 47.195 C28.875 47.603 28.875 47.603 30.339 49.665 C32.596 52.838 34.876 55.992 37.188 59.125 C37.549 59.627 37.911 60.129 38.283 60.646 C39.14 61.802 40.064 62.907 41 64 C41.66 64 42.32 64 43 64 C41.716 60.464 40.217 57.67 37.953 54.672 C37.355 53.871 36.757 53.071 36.141 52.246 C35.517 51.422 34.893 50.599 34.25 49.75 C31.814 46.514 29.4 43.263 27 40 C26.386 39.195 25.772 38.39 25.139 37.561 C24.572 36.783 24.006 36.005 23.422 35.203 C22.907 34.514 22.393 33.824 21.862 33.114 C21 31 21 31 21.686 28.466 C22.867 26.25 24.07 24.32 25.602 22.336 C25.846 22.012 25.846 22.012 27.086 20.375 C28.119 19.033 29.153 17.692 30.188 16.352 C30.675 15.707 31.162 15.062 31.664 14.398 C32.112 13.818 32.56 13.237 33.022 12.638 C34 11 34 11 34 8 C30.794 9.069 30.41 9.434 28.59 12.055 C28.374 12.362 28.374 12.362 27.279 13.918 C26.837 14.564 26.394 15.21 25.938 15.875 C25.491 16.513 25.044 17.151 24.584 17.809 C22.691 20.519 20.828 23.246 19 26 C15.543 24.848 15.121 24.118 13.152 21.184 C12.63 20.42 12.107 19.656 11.568 18.869 C11.03 18.067 10.492 17.264 9.938 16.438 C8.869 14.849 7.796 13.264 6.715 11.684 C6.242 10.978 5.769 10.272 5.281 9.545 C4.858 9.035 4.436 8.525 4 8 C3.34 8 2.68 8 2 8 Z" fill="#2A9B8F" transform="translate(323,203)"/>
+        <path d="M0 0 C1.833 0.605 3.666 1.21 5.5 1.812 C6.667 2.207 7.834 2.602 9 3 C9 3.33 9 3.66 9 4 C1.08 4 -6.84 4 -15 4 C-15 4.66 -15 5.32 -15 6 C-15.659 5.88 -16.318 5.759 -16.998 5.635 C-19.998 5.088 -22.999 4.544 -26 4 C-26.952 3.827 -27.903 3.654 -28.884 3.476 C-86.007 -6.797 -144.307 2.589 -192.852 35.574 C-197.551 38.857 -202.123 42.271 -206.574 45.883 C-206.867 46.117 -206.867 46.117 -208.348 47.304 C-209.461 48.202 -210.563 49.114 -211.652 50.041 C-214.201 52.104 -215.472 53.032 -218.809 52.832 C-221 52 -221 52 -222 51 C-222.406 47.459 -222.517 45.672 -220.305 42.797 C-219.503 42.121 -218.701 41.446 -217.875 40.75 C-217.432 40.374 -216.989 39.999 -216.532 39.612 C-207.163 31.826 -196.979 25.116 -186.513 18.912 C-185.113 18.068 -183.737 17.186 -182.363 16.301 C-129.704 -16.679 -57.646 -19.97 0 0 Z" fill="#2A9B8F" transform="translate(321,122)"/>
+        <path d="M0 0 C31.02 0 62.04 0 94 0 C104 27 104 27 104 28 C102.02 28 100.04 28 98 28 C97.835 27.67 97.835 27.67 97 26 C95.337 25.393 95.337 25.393 93.155 24.887 C92.34 24.693 91.526 24.5 90.687 24.3 C89.802 24.098 88.916 23.896 88.004 23.688 C87.552 23.58 87.552 23.58 85.265 23.038 C82.366 22.351 79.465 21.674 76.562 21 C73.664 20.325 70.766 19.648 67.871 18.962 C66.066 18.535 64.26 18.114 62.452 17.7 C61.635 17.506 60.817 17.313 59.975 17.113 C59.254 16.946 58.533 16.779 57.79 16.607 C56 16 56 16 54 14 C54.994 13.768 55.989 13.536 57.013 13.297 C60.692 12.437 64.369 11.566 68.044 10.692 C69.637 10.315 71.231 9.94 72.825 9.569 C75.113 9.035 77.399 8.491 79.684 7.945 C80.4 7.781 81.117 7.616 81.855 7.446 C83.587 7.027 85.297 6.521 87 6 C87.33 5.34 87.66 4.68 88 4 C87.451 4.139 87.451 4.139 84.67 4.842 C80.556 5.878 76.436 6.892 72.314 7.9 C70.538 8.338 68.763 8.781 66.99 9.23 C64.426 9.879 61.859 10.506 59.289 11.129 C58.509 11.331 57.73 11.533 56.927 11.741 C48.213 13.808 40.152 12.254 31.586 10.152 C30.845 9.976 30.105 9.8 29.342 9.619 C27.018 9.064 24.697 8.501 22.375 7.938 C20.783 7.556 19.19 7.175 17.598 6.795 C13.73 5.87 9.865 4.937 6 4 C6.33 4.66 6.66 5.32 7 6 C9.442 6.747 11.832 7.374 14.316 7.945 C15.047 8.12 15.779 8.295 16.532 8.475 C18.874 9.033 21.218 9.579 23.562 10.125 C25.148 10.501 26.733 10.877 28.318 11.254 C32.21 12.178 36.104 13.092 40 14 C37.81 16.19 36.954 16.434 34.025 17.113 C33.208 17.307 32.39 17.5 31.548 17.7 C30.665 17.902 29.781 18.104 28.871 18.312 C27.014 18.753 25.156 19.193 23.299 19.633 C20.361 20.32 17.422 21.004 14.483 21.687 C11.652 22.347 8.824 23.017 5.996 23.688 C5.111 23.89 4.225 24.092 3.313 24.3 C2.499 24.494 1.684 24.687 0.845 24.887 C0.125 25.054 -0.595 25.221 -1.337 25.393 C-3 26 -3 26 -4 28 C-5.98 28 -7.96 28 -10 28 C-8.897 24.833 -7.793 21.666 -6.688 18.5 C-6.379 17.613 -6.07 16.726 -5.752 15.812 C-5.446 14.936 -5.14 14.059 -4.824 13.156 C-4.547 12.36 -4.269 11.564 -3.983 10.744 C-2.695 7.148 -1.341 3.576 0 0 Z" fill="#2A9B8F" transform="translate(294,287)"/>
+        <path d="M0 0 C1.32 0 2.64 0 4 0 C3.947 0.981 3.893 1.963 3.838 2.974 C2.815 24.795 4.998 43.787 12.562 64.375 C12.909 65.348 13.256 66.321 13.613 67.323 C14.617 70.096 15.672 72.843 16.754 75.586 C17.059 76.411 17.365 77.236 17.68 78.087 C19.96 83.512 19.96 83.512 23.047 84.96 C25.265 85.526 25.265 85.526 29 86 C29 89.63 29 93.26 29 97 C11.18 97 -6.64 97 -25 97 C-25 93.37 -25 89.74 -25 86 C-24.384 85.922 -24.384 85.922 -21.265 85.526 C-18.7 84.872 -17.369 84.448 -15.671 82.388 C-14.533 80.161 -13.622 77.931 -12.754 75.586 C-12.412 74.72 -12.07 73.853 -11.718 72.96 C-10.621 70.113 -9.587 67.249 -8.562 64.375 C-8.205 63.403 -7.848 62.43 -7.48 61.429 C-0.077 40.98 1.175 21.551 0 0 Z" fill="#2A9B8F" transform="translate(339,104)"/>
+        <path d="M0 0 C1.046 0.775 2.095 1.547 3.145 2.316 C20.369 15.106 20.369 15.106 22 20 C21.474 21.986 21.474 21.986 20.559 24.246 C20.225 25.078 19.891 25.911 19.547 26.768 C19.181 27.649 18.815 28.53 18.438 29.438 C18.254 29.886 18.254 29.886 17.328 32.154 C9.909 50.091 9.909 50.091 6 54 C2.875 53.625 2.875 53.625 0 53 C-1.189 48.189 -0.706 45.135 1.309 40.727 C1.554 40.158 1.8 39.589 2.053 39.004 C2.834 37.204 3.635 35.415 4.438 33.625 C4.973 32.4 5.508 31.175 6.041 29.949 C7.345 26.959 8.667 23.977 10 21 C9.627 20.86 9.627 20.86 7.738 20.152 C3.795 18.493 0.502 16.12 -3 13.688 C-3.699 13.214 -4.397 12.74 -5.117 12.252 C-8.194 10.13 -11.078 8.053 -13.668 5.348 C-16.066 2.934 -18.357 1.414 -21.312 -0.25 C-22.889 -1.143 -24.456 -2.053 -26 -3 C-26 -3.33 -26 -3.66 -26 -4 C-7.679 -6.124 -7.679 -6.124 0 0 Z" fill="#2A9B8F" transform="translate(377,150)"/>
+      </svg>
+      <span class="logo-text">
+        <span class="brand-name">ExtraSpeech</span><br>
+        <span class="brand-tag">EN &rarr; FR Translator</span>
+      </span>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#why">Why direct</a>
+      <a href="#sectors">Sectors</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary" style="padding:10px 18px;font-size:13.5px;">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">English &rarr; French (France) Translator</span>
+        <h1>French translations that make your English work just as hard.</h1>
+        <p class="lead">If your English content converts, informs and persuades, your French version should do exactly the same &mdash; not a polite, slightly-off approximation of it. That's the whole job: 30+ years translating for the finance, crypto, tech and healthcare companies who can't afford "close enough."</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://linkedin.com/in/olivierdenhartigh" target="_blank" rel="noopener">Let's connect on LinkedIn</a>
+          <a class="btn btn-secondary" href="#contact">See how to reach me</a>
+        </div>
+        <p class="hero-note">No agency in between &mdash; you work with the translator, not a project manager relaying messages both ways.</p>
+      </div>
+      <div class="hero-card">
+        <ul>
+          <li><span class="check">&#10003;</span> <span><b>30+ years</b> translating English into French (France) exclusively</span></li>
+          <li><span class="check">&#10003;</span> <span><b>190+ projects</b> delivered in the 12 months to August 2026, 100% on deadline</span></li>
+          <li><span class="check">&#10003;</span> <span>MA, Translation Studies &mdash; University of Portsmouth</span></li>
+          <li><span class="check">&#10003;</span> <span>14 years lived in the UK, South Africa, Australia and Canada</span></li>
+          <li><span class="check">&#10003;</span> <span>Native French speaker, 40+ years based in France</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY DIRECT -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why work directly</span>
+        <h2>No middleman between your content and the translator working on it</h2>
+        <p>Most translation agencies you might hire are using a freelance translator anyway &mdash; they're just taking a cut along the way. Working directly changes three things.</p>
+      </div>
+      <div class="three-col">
+        <div class="arg-card">
+          <div class="num">1</div>
+          <h3>(Much) better quality</h3>
+          <p>A dedicated translator gets to know your business and becomes part of your team, not a name pulled from a database. Style and terminology stay consistent from one project to the next.</p>
+        </div>
+        <div class="arg-card">
+          <div class="num">2</div>
+          <h3>Better value for money</h3>
+          <p>Cutting the intermediary means faster turnaround and a more direct rate, without touching quality &mdash; the work is exactly the same, there's just one fewer party billing for it.</p>
+        </div>
+        <div class="arg-card">
+          <div class="num">3</div>
+          <h3>Direct contact, always</h3>
+          <p>One point of contact, one relationship you can actually rely on. No brief lost in translation between a project manager and the person doing the work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Services</span>
+        <h2>Beyond translation</h2>
+        <p>Core linguistic work, plus the services that have grown around it as more of what companies produce is machine- or AI-generated first and needs a trained eye afterwards.</p>
+      </div>
+      <div class="service-groups">
+        <div class="service-group">
+          <h3>Core linguistic services</h3>
+          <div class="service-item">
+            <b>Translation &amp; Localisation</b>
+            <p>English into French (France), written for a French reader rather than transposed word for word.</p>
+          </div>
+          <div class="service-item">
+            <b>Editing &amp; Proofreading</b>
+            <p>Revision of human-translated content, scored against your own criteria and delivered at a single quality standard.</p>
+          </div>
+          <div class="service-item">
+            <b>LQA &mdash; Formal Quality Audit</b>
+            <p>Formal review of another linguist's work, or of machine and AI output, scored against your LQA model and reported by error category.</p>
+          </div>
+          <div class="service-item">
+            <b>AI Post-Editing &amp; Optimization</b>
+            <p>MTPE of machine- or AI-generated French, including checks for fluent-sounding hallucinated content, transcreation of AI marketing copy, and benchmarking across AI engines.</p>
+          </div>
+        </div>
+        <div class="service-group">
+          <h3>Additional services</h3>
+          <div class="service-item">
+            <b>Localization &amp; Functionality Testing</b>
+            <p>Checking that translated strings still fit the interface they live in, and that the UI/UX behaves as intended once translated.</p>
+          </div>
+          <div class="service-item">
+            <b>Prompt Engineering</b>
+            <p>Designing and calibrating the system prompt that keeps AI output aligned with your style guide, terminology and tone, batch after batch.</p>
+          </div>
+          <div class="service-item">
+            <b>Language Data Management</b>
+            <p>Structuring translation memories and glossaries for reliable AI use &mdash; cleaning, RAG curation, and correcting AI output so the model improves.</p>
+          </div>
+          <div class="service-item">
+            <b>Multimedia AI</b>
+            <p>Checking and correcting AI-generated subtitles and voice output &mdash; ASR subtitle correction, and dubbing/voice-over review for pronunciation, timing and register.</p>
+          </div>
+          <div class="service-item">
+            <b>Post-DTP Proofreading</b>
+            <p>A final check on the PDF or formatted file once it's typeset &mdash; wording, terminology and layout read the way they should before it reaches your client.</p>
+          </div>
+        </div>
+      </div>
+      <div class="subtitling-box">
+        <h3>Subtitling (as needed)</h3>
+        <ul>
+          <li>Transcription + time-coding, when a script is provided</li>
+          <li>Translation only, without time-coding</li>
+          <li>Transcription + full time-coding, when no script is provided</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTORS -->
+  <section id="sectors">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Sectors</span>
+        <h2>Where the work has actually been</h2>
+        <p>Rates and turnaround stay consistent across sectors; what changes is the terminology risk. These are the areas with the deepest track record.</p>
+      </div>
+      <div class="sector-grid">
+        <div class="sector-chip"><b>Finance &amp; Financial Markets</b><span>Client-recommended</span></div>
+        <div class="sector-chip"><b>Crypto &amp; Blockchain</b><span>Client-recommended</span></div>
+        <div class="sector-chip"><b>Healthcare &amp; Medical Devices</b><span>Client-recommended</span></div>
+        <div class="sector-chip"><b>Enterprise IT &amp; Software</b><span>Client-recommended</span></div>
+        <div class="sector-chip"><b>Cybersecurity</b></div>
+        <div class="sector-chip"><b>SaaS &amp; Software</b></div>
+        <div class="sector-chip"><b>Artificial Intelligence</b></div>
+        <div class="sector-chip"><b>Data Intelligence &amp; BI</b></div>
+        <div class="sector-chip"><b>E-learning &amp; Training</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Testimonials</span>
+        <h2>What clients say &mdash; in their own name</h2>
+        <p>Five recommendations, published publicly on LinkedIn by their authors, under their own names. Nothing here is paraphrased into a client's voice &mdash; you can read every one of them on my profile.</p>
+      </div>
+
+      <div class="feature-quote">
+        <p>&ldquo;I've had a pleasure of working with Olivier for more than 8 years. During that time he has always been exceptionally professional, linguistically precise and deadline-perfect. Olivier has the rare ability to ask the right amount of questions (and excellent ones at that) and has on many occasions been a tremendous help to other linguists on multilingual projects. A perfect modern technical translator with a fine grasp of technology and deep respect for linguistic tradition!&rdquo;</p>
+        <footer>Alex Glickman &mdash; Account Manager / Project Manager / Customer Success &middot; LinkedIn recommendation, August 2026</footer>
+      </div>
+
+      <div class="quote-grid">
+        <div class="quote-card">
+          <p>&ldquo;Thorough and communicative &mdash; he consistently delivers high-quality work.&rdquo;</p>
+          <footer><b>Frank Xu</b> &mdash; Vendor Manager, Localization for Regulated &amp; High-Growth Sectors (Crypto, Finance, IT) &middot; LinkedIn, July 2026</footer>
+        </div>
+        <div class="quote-card">
+          <p>&ldquo;Exceptionally responsive and consistently delivers high-quality, reliable work. I would not hesitate to work with him again.&rdquo;</p>
+          <footer><b>Harold Sun</b> &mdash; Localization &middot; LinkedIn, July 2026</footer>
+        </div>
+        <div class="quote-card">
+          <p>Quality, professionalism and responsiveness &ldquo;required for our demanding financial customers,&rdquo; with flexibility on custom requests.</p>
+          <footer><b>Isabelle Theimann</b> &mdash; Enterprise Sales &amp; Account Director, EC Innovations &middot; LinkedIn, July 2026</footer>
+        </div>
+        <div class="quote-card">
+          <p>Four years of collaboration on technical, marketing and medical-device content &mdash; &ldquo;consistently reliable, delivered on time,&rdquo; translations &ldquo;clear, natural and well adapted.&rdquo;</p>
+          <footer><b>Shiran Vilozni</b> &mdash; then Project Manager, MyWord Localization &middot; LinkedIn, August 2026</footer>
+        </div>
+      </div>
+      <p class="verify-note">All five are visible on <a href="https://linkedin.com/in/olivierdenhartigh" target="_blank" rel="noopener">linkedin.com/in/olivierdenhartigh</a> &mdash; recommendations, not references supplied on request.</p>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="credentials">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Background</span>
+        <h2>The credentials behind the work</h2>
+      </div>
+      <div class="cred-grid">
+        <div class="cred-item"><span class="dot">&#9642;</span><p><b>MA, Translation Studies</b> &mdash; University of Portsmouth, UK</p></div>
+        <div class="cred-item"><span class="dot">&#9642;</span><p><b>BA (Hons), English</b> &mdash; Universit&eacute; Lyon II, France</p></div>
+        <div class="cred-item"><span class="dot">&#9642;</span><p><b>30+ years</b> of experience, English into French (France) only &mdash; no other language pair</p></div>
+        <div class="cred-item"><span class="dot">&#9642;</span><p><b>14 years</b> lived in the UK, South Africa, Australia and Canada; <b>40+ years</b> based in France</p></div>
+        <div class="cred-item"><span class="dot">&#9642;</span><p><b>Several million words</b> translated to date</p></div>
+        <div class="cred-item"><span class="dot">&#9642;</span><p><b>Several thousand pages</b> of machine-translated French post-edited (MTPE) &mdash; real, hands-on AI-output experience</p></div>
+        <div class="cred-item"><span class="dot">&#9642;</span><p><b>190+ projects</b> delivered in the 12 months to August 2026, <b>100% on deadline</b></p></div>
+        <div class="cred-item"><span class="dot">&#9642;</span><p>Linguistic quality control is part of how every project is translated &mdash; never a separate line item</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="alt-bg">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Would you like to talk about it?</h2>
+        <p>A rate sheet is available on request, and if a project comes your way, a small first batch is the easiest way to see whether it's a fit. New direct-client work is limited each quarter, so if the timing matters, sooner is better than later.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://linkedin.com/in/olivierdenhartigh" target="_blank" rel="noopener" style="background:#fff;color:var(--navy);">Connect on LinkedIn</a>
+        </div>
+        <div class="contact-details">
+          Olivier Den Hartigh &middot; ExtraSpeech &middot; +33 7 67 12 94 01 &middot; Based in the South of France
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    &copy; <span id="year">2026</span> Olivier Den Hartigh &mdash; ExtraSpeech. English &rarr; French (France) Translator.
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
